@@ -1,0 +1,175 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #090d20;
+  color: #fffacd;  /*#fbbb03*/
+  font-size:18px;
+}
+
+
+.header {
+  padding: 10px 16px;
+  background-color: #171F44;
+  color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:999;
+}
+
+
+
+.head-section {
+  /* The image used 
+  background-image: url("../img/bg3.jpg");
+*/
+  /* Full height */
+  height: 100vh; 
+  width: 100vw;
+
+  /* Center and scale the image nicely 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+  text-align: center;
+  
+}
+
+.head-section font{
+
+	font-size:128px;
+    color:white;
+    
+}
+
+.title{
+	font-size:64px;
+    color:white;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.rounded-transparent-button{
+	padding:10px;
+	border-radius:20px;
+	background-color: transparent;
+	border: 3px solid white;
+	color:white;
+	font-size:36px;
+	margin-top:10%;
+}
+
+.rounded-transparent-button:hover{
+	color:#090d20;
+	background-color: white;
+}
+
+.full-width{
+	width:100%;
+}
+
+section{
+	/*min-height:100vh;*/
+	width:100vw;
+	padding:10px;
+}
+
+
+.dept-card{
+	border: 2px solid white;
+	width:100%;
+	height:400px;
+	margin-top:100px;
+}
+.dept-title{
+	min-height:100px;
+	margin-top:-50px;
+	border: 2px solid white;
+	max-width:90%;
+	background-color: #090d20;
+	padding:12px;
+}
+
+.dept-title font{
+	font-size:40px;
+}
+
+
+.dept-description{
+	padding:12px;
+}
+
+.delimiter{
+	width:100%;
+	border-style: dashed;
+	border-color:white;
+	border-width:1px;
+	margin-top:50px;
+}
+
+
+.list {
+	list-style-type: none;
+	padding:20px;
+}
+
+
+.project-card{
+	width:100%;
+    min-height:250px;
+    text-align:center;
+   /* background-color:black;*/
+    font-size:30px;
+}
+.card-img{
+  	width:100%;
+    height:200px;
+    overflow:hidden;
+}
+.project-card img{
+	width:100%;
+    height:200px;
+    background-color:black;
+}
+
+.project-card p{
+	margin-top:0px;
+    color:white;
+}
+
+.zoom{
+	transition: 0.3s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+}
+
+
+
+
+.news-card{
+	border: 2px solid white;
+	width:80%;
+	height:200px;
+}
+
+.partner-img{
+	max-width: 90%;
+	maex-height:300px;
+	margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

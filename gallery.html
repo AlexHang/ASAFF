@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/mobile.css" />
+
+<style type="text/css">
+		
+		.modal-body, .modal-content , .modal-footer{
+			background-color:#090d20;
+		}
+		
+		#photos {
+			margin-top:25px;
+		   /* Prevent vertical gaps */
+		   line-height: 0; 
+		   -webkit-column-count: 3;
+		   -webkit-column-gap:   0px;
+		   -moz-column-count:    3;
+		   -moz-column-gap:      0px;
+		   column-count:         3;
+		   column-gap:           0px;
+		}
+
+		#photos img {
+		  /* Just in case there are inline attributes */
+		  width: 100% !important;
+		  height: auto !important;
+		} 
+
+		* {box-sizing: border-box;}
+
+		.img-card {
+			width:100%;
+			position: relative;
+		}
+
+		.image {
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		}
+
+		.overlay {
+		  position: absolute; 
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 100%;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+
+		.img-card:hover .overlay {
+		  opacity: 1;
+		}
+		
+		
+		.carousel-caption{
+			background-color: rgba(0, 0, 0, 0.68);
+			padding-top:0px;
+			padding-bottom:0px;
+		}
+		
+		
+		
+		
+		
+		@media (max-width: 1200px) {
+		  #photos {
+		  -moz-column-count:    3;
+		  -webkit-column-count: 3;
+		  column-count:         3;
+		  }
+		}
+		@media (max-width: 1000px) {
+		  #photos {
+		  -moz-column-count:    3;
+		  -webkit-column-count: 3;
+		  column-count:         3;
+		  }
+		}
+		@media (max-width: 800px) {
+		  #photos {
+		  -moz-column-count:    2;
+		  -webkit-column-count: 2;
+		  column-count:         2;
+		  }
+		}
+		@media (max-width: 400px) {
+		  #photos {
+		  -moz-column-count:    1;
+		  -webkit-column-count: 1;
+		  column-count:         1;
+		  }
+		}
+	
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+	<section>
+		<div class="container">
+			<div class="row" style="padding:20px;">
+				<center>
+					<font class="title">
+						Galerie
+					</font>
+				</center>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<img src="img/proiecte/recrutare.jpg" style="width:100%;" alt="" />
+				</div>
+				<div class="col-md-6">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="photos">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!-- Modal -->
+	  <div class="modal fade" id="galleryModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators" id="carouselIndicators">
+				
+	
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" style="background-color:black;" id="carouselImages">
+				 
+
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+		function getRandomSize(min, max) {
+		  return Math.round(Math.random() * (max - min) + min);
+		}
+		
+		
+		function openModal(nr){
+			$("#galleryModal").modal();
+			$("#myCarousel").carousel(nr);
+		}
+
+		var allImages = "";
+		var photos=[];
+		var carouselIndicators=document.getElementById("carouselIndicators");
+		var carouselImages=document.getElementById("carouselImages");
+		
+		for (var i = 0; i < 50; i++) {
+			var width = getRandomSize(400, 600);
+			var height =  getRandomSize(400, 600);
+			photos.push({
+				"src":'https://source.unsplash.com/random/'+width+'x'+height,
+				"description":"Descriere Imagine"
+			});
+ 
+		}
+		
+		
+		
+		for (var i = 0; i < photos.length; i++) {
+			allImages += '<div class="img-card">'+
+						  '<a onclick="openModal('+i+')">'+
+							'<img src="'+photos[i]["src"]+'">'+
+						  '</a>'+
+						  '<div class="overlay">'+photos[i]["description"]+'</div>'+
+						'</div>';
+			if(i==0){
+				//carouselIndicators.innerHTML+='<li data-target="#myCarousel" data-slide-to="'+i+'" class="active"></li>';
+				carouselImages.innerHTML+='<div class="item active">'+
+											'<center>'+
+												'<img style="width:90%;" src="'+photos[i]["src"]+'">'+
+											'</center>'+
+											'<div class="carousel-caption">'+
+											  '<h3>'+photos[i]["description"]+'</h3>'+
+											'</div>'+
+										  '</div>';
+			}else{
+				//carouselIndicators.innerHTML+='<li data-target="#myCarousel" data-slide-to="'+i+'" ></li>';
+				carouselImages.innerHTML+='<div class="item">'+
+											'<center>'+
+												'<img style="width:90%;" src="'+photos[i]["src"]+'">'+
+											'</center>'+
+											'<div class="carousel-caption">'+
+											  '<h3>'+photos[i]["description"]+'</h3>'+
+											'</div>'+
+										  '</div>';
+			}
+			
+		  
+		 // '<img src="https://via.placeholder.com/'+width+'x'+height+'" title="Hello World">'; 
+		}
+
+		$('#photos').append(allImages);
+	</script>
+	
+</body>
+</html>
